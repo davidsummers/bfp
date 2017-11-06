@@ -26,7 +26,7 @@ Posit::Posit(int nbits, int es) :
 {
 }
 
-bool Posit::isZero()
+bool Posit::isZero() const
 {
     return util_is_zero(mBits);
 }
@@ -36,7 +36,7 @@ bool Posit::isOne()
     return util_is_one(mBits);
 }
 
-bool Posit::isInf()
+bool Posit::isInf() const
 {
     return util_is_inf(mBits);
 }
@@ -46,7 +46,7 @@ bool Posit::isNeg()
     return util_is_neg(mBits);
 }
 
-bool Posit::isNan()
+bool Posit::isNan() const
 {
     return mNan;
 }
@@ -257,7 +257,7 @@ void Posit::set(double n)
     }
 }
 
-float Posit::getFloat()
+float Posit::getFloat() const
 {
     if (isZero()) {
         return 0.f;

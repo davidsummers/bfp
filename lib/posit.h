@@ -16,11 +16,11 @@ private:
 public:
     Posit(int nbits, int es);
 
-    bool isZero();                  // check for 0
+    bool isZero() const;            // check for 0
     bool isOne();                   // check for +/- 1
-    bool isInf();                   // check for +/- infinity
+    bool isInf() const;             // check for +/- infinity
     bool isNeg();                   // check for negative
-    bool isNan();                   // check for NaN
+    bool isNan() const;             // check for NaN
 
     int nbits();                    // size in bits
     int ss();                       // sign size in bits
@@ -50,7 +50,7 @@ public:
     void set(float n);              // x = n
     void set(double n);             // x = n
 
-    float getFloat();               // n = x
+    float getFloat() const;         // n = x
     double getDouble();             // n = x
 
     // debug
